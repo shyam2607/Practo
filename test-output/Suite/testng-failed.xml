@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="practo(failed)" preserve-order="true">
+    <classes>
+      <class name="practoapp.apptest">
+        <methods>
+          <include name="automation"/>
+        </methods>
+      </class> <!-- practoapp.apptest -->
+    </classes>
+  </test> <!-- practo(failed) -->
+</suite> <!-- Failed suite [Suite] -->
