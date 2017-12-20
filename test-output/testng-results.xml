@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="113455" started-at="2017-12-20T10:10:12Z" finished-at="2017-12-20T10:12:06Z">
+  <suite name="Default suite" duration-ms="135269" started-at="2017-12-20T11:59:32Z" finished-at="2017-12-20T12:01:47Z">
     <groups>
     </groups>
-    <test name="practo" duration-ms="113455" started-at="2017-12-20T10:10:12Z" finished-at="2017-12-20T10:12:06Z">
+    <test name="Default test" duration-ms="135269" started-at="2017-12-20T11:59:32Z" finished-at="2017-12-20T12:01:47Z">
       <class name="practoapp.apptest">
-        <test-method status="PASS" signature="automation()[pri:0, instance:practoapp.apptest@2ed94a8b]" name="automation" duration-ms="113441" started-at="2017-12-20T15:40:12Z" finished-at="2017-12-20T15:42:06Z">
+        <test-method status="PASS" signature="automation()[pri:0, instance:practoapp.apptest@6e0e048a]" name="automation" duration-ms="135236" started-at="2017-12-20T17:29:32Z" finished-at="2017-12-20T17:31:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- automation -->
       </class> <!-- practoapp.apptest -->
-    </test> <!-- practo -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

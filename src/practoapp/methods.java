@@ -71,17 +71,17 @@ public void installation() throws MalformedURLException, InterruptedException
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//android.widget.Button[@text='Login using email?']")).click();
 		Thread.sleep(5000);
+	}
+	public void logincredentials() throws InterruptedException
+	{
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//android.widget.EditText[@resource-id='com.practo.droid:id/et_username']")).sendKeys(mail);
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//android.widget.EditText[@resource-id='com.practo.droid:id/et_password']")).sendKeys(password);
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//android.widget.Button[@resource-id='com.practo.droid:id/btn_submit']")).click();
 		Thread.sleep(5000);
-		
-		
 	}
-	
-	
 	public void switchapp() throws InterruptedException
 	{
 	Thread.sleep(3000);

@@ -50,12 +50,14 @@ public class apptest
 	      String testcase = row.getCell(1).toString();         
 	      System.out.println(testcase);
 	      
+	      String testcaseid = row.getCell(0).toString();         
+	      
 	      switch(testcase)
 	      {
 	      
 	      case "Installation": 
 	    	  
-	    	  System.out.println("testcase : " + testcase);
+	    	  System.out.println(testcaseid + ":" + testcase);
 	          obj.installation();     
 	          Thread.sleep(5000);
 	          updateresult("//android.widget.Button[@resource-id='com.practo.droid:id/next_btn']", i);
@@ -63,7 +65,7 @@ public class apptest
 	    	  
 	      case	"Home":
 	    	  
-	    	  System.out.println("testcase : " + testcase);
+	    	  System.out.println(testcaseid + ":" + testcase);
 	          obj.home();     
 	          Thread.sleep(5000); 
 	          updateresult("//android.widget.Button[@text='Login']",i);
@@ -71,18 +73,22 @@ public class apptest
 	    	  
 	      case	"Login":
 	    	  
-	    	  System.out.println("testcase : " + testcase);
+	    	  System.out.println(testcaseid + ":" + testcase);
 	          obj.login();    
 	          Thread.sleep(5000);
-	          updateresult("//android.widget.ImageButton[@resource-id='com.practo.droid:id/toolbar_notifications']", i);
+	          updateresult("//android.widget.TextView[@text='Login']", i);
 	    	  break;  
 	    	  
-	      case	"Switchapp":
 	    	  
-	    	  System.out.println("testcase : " + testcase);
-	          obj.switchapp();
-	          Thread.sleep(3000);  
+	      case	"Login Credentials":
+	    	  
+	    	  System.out.println(testcaseid + ":" + testcase);
+	          obj.logincredentials();
+	          Thread.sleep(5000);
+	          updateresult("//android.widget.ImageButton[@resource-id='com.practo.droid:id/toolbar_notifications']",i);
 	    	  break;  
+	    	  
+	    	  
 	    	  
 	
 	      }
