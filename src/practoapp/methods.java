@@ -52,15 +52,11 @@ public void installation() throws MalformedURLException, InterruptedException
 		  Thread.sleep(5000);
   }
 	
-	
-	
-	
-	public void home() throws InterruptedException
+	public void homescreen() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//android.widget.Button[@resource-id='com.practo.droid:id/next_btn']")).click();
 		Thread.sleep(5000);
 	}
-	
 	
 	
 	public void login() throws InterruptedException 
@@ -82,6 +78,33 @@ public void installation() throws MalformedURLException, InterruptedException
 		driver.findElement(By.xpath("//android.widget.Button[@resource-id='com.practo.droid:id/btn_submit']")).click();
 		Thread.sleep(5000);
 	}
+	
+	public void settings() throws InterruptedException
+	
+	{
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//android.widget.ImageButton[@resource-id='com.practo.droid:id/toolbar_settings']")).click();
+	}
+	
+	public void homebutton() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Navigate Up']")).click();
+		
+	}
+	
+	public void profile() throws InterruptedException
+	{
+		
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Profiles']")).click();
+	}
+	public void apps() throws InterruptedException 
+	{
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Apps']")).click();
+	}
+	
 	public void switchapp() throws InterruptedException
 	{
 	Thread.sleep(3000);
@@ -90,8 +113,6 @@ public void installation() throws MalformedURLException, InterruptedException
 	String s1=driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.google.android.apps.messaging:id/conversation_snippet']")).getText();
 	System.out.println(s1);
 	//if(s1==driver.findElement(By.partialLinkText(linkText)))
-	
-	
 	Thread.sleep(4000);
 	}
 

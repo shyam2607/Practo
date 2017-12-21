@@ -63,10 +63,10 @@ public class apptest
 	          updateresult("//android.widget.Button[@resource-id='com.practo.droid:id/next_btn']", i);
 	    	  break;
 	    	  
-	      case	"Home":
+	      case	"HomeScreen":
 	    	  
 	    	  System.out.println(testcaseid + ":" + testcase);
-	          obj.home();     
+	          obj.homescreen();
 	          Thread.sleep(5000); 
 	          updateresult("//android.widget.Button[@text='Login']",i);
 	    	  break;
@@ -85,10 +85,27 @@ public class apptest
 	    	  System.out.println(testcaseid + ":" + testcase);
 	          obj.logincredentials();
 	          Thread.sleep(5000);
-	          updateresult("//android.widget.ImageButton[@resource-id='com.practo.droid:id/toolbar_notifications']",i);
+	          updateresult("//android.widget.ImageButton[@resource-id='com.practo.droid:id/toolbar_settings']",i);
+	    	  break;  
+	     
+	      case	"Settings":
+	    	  
+	    	  System.out.println(testcaseid + ":" + testcase);
+	          obj.settings();
+	          Thread.sleep(5000);
+	          updateresult("//android.widget.TextView[@text='Settings']",i);
 	    	  break;  
 	    	  
+	      case	"Profile":
 	    	  
+	    	  System.out.println(testcaseid + ":" + testcase);
+	          obj.homebutton();
+	          obj.profile();
+	          Thread.sleep(3000);
+	          obj.apps();
+	          Thread.sleep(3000);
+	          updateresult("//android.widget.TextView[@text='Profiles']",i);
+	    	  break;  
 	    	  
 	
 	      }
