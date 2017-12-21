@@ -23,6 +23,7 @@ public class apptest
     public static XSSFCell cell;
     public static WebElement searchelement;
     
+    //Creation of object for the class methods
     static methods obj = new methods();
     
  
@@ -30,12 +31,14 @@ public class apptest
   public void automation() throws IOException, InterruptedException 
   {
 	  	FileInputStream finput = new FileInputStream(src);
-		// Load the workbook.
+		
+	  	// Load the workbook.
 		workbook = new XSSFWorkbook(finput);
+		
 		// Load the sheet in which data is stored.
 		sheet= workbook.getSheetAt(0);
 		
-		
+		//Getting the row count value and storing 
 		int rc=sheet.getLastRowNum();
 		
 		for(int i=1; i<=rc; i++)       
@@ -43,13 +46,15 @@ public class apptest
 	    {     
 	      Row row = sheet.getRow(i); 
 	      
-	      if(row == null || row.getCell(1)==null) {      
+	      if(row == null || row.getCell(1)==null) 
+	      {      
 	       continue;
-	    }
+	      }
 	           
 	      String testcase = row.getCell(1).toString();         
 	      System.out.println(testcase);
 	      
+	      //storing the test caseid value  
 	      String testcaseid = row.getCell(0).toString();         
 	      
 	      switch(testcase)
@@ -100,9 +105,9 @@ public class apptest
 	    	  
 	    	  System.out.println(testcaseid + ":" + testcase);
 	          obj.homebutton();
-	          obj.profile();
-	          Thread.sleep(3000);
 	          obj.apps();
+	          Thread.sleep(3000);
+	          obj.profile();
 	          Thread.sleep(3000);
 	          updateresult("//android.widget.TextView[@text='Profiles']",i);
 	    	  break;  
