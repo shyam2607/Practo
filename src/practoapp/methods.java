@@ -46,12 +46,14 @@ public void installation() throws MalformedURLException, InterruptedException
 
 		  // Created object of RemoteWebDriver will all set capabilities.
 		  // Set appium server address and port number in URL string.
-		  // It will launch calculator app in android device.
+		  // It will launch practo app in android device.
 		  driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		  Thread.sleep(5000);
   }
 	
+	
+	//Method for opening the home screen
 	public void homescreen() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//android.widget.Button[@resource-id='com.practo.droid:id/next_btn']")).click();
@@ -59,6 +61,8 @@ public void installation() throws MalformedURLException, InterruptedException
 	}
 	
 	
+	
+	//Method for login button
 	public void login() throws InterruptedException 
 	{
 		driver.findElement(By.xpath("//android.widget.Button[@resource-id='com.practo.droid:id/login_btn']")).click();
@@ -68,6 +72,10 @@ public void installation() throws MalformedURLException, InterruptedException
 		driver.findElement(By.xpath("//android.widget.Button[@text='Login using email?']")).click();
 		Thread.sleep(5000);
 	}
+	
+	
+	
+	//Method for entering Username and password
 	public void logincredentials() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -79,6 +87,8 @@ public void installation() throws MalformedURLException, InterruptedException
 		Thread.sleep(5000);
 	}
 	
+	
+	//Method for settings button
 	public void settings() throws InterruptedException
 	
 	{
@@ -86,6 +96,8 @@ public void installation() throws MalformedURLException, InterruptedException
 		driver.findElement(By.xpath("//android.widget.ImageButton[@resource-id='com.practo.droid:id/toolbar_settings']")).click();
 	}
 	
+	
+	//Method for home button
 	public void homebutton() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -93,18 +105,28 @@ public void installation() throws MalformedURLException, InterruptedException
 		
 	}
 	
+	
+	
+	//Method for profile screen
 	public void profile() throws InterruptedException
 	{
 		
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Profiles']")).click();
 	}
+	
+	
+	
+	//Method for opening apps menu 
 	public void apps() throws InterruptedException 
 	{
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Apps']")).click();
 	}
 	
+	
+	
+	//Method for switching to another app
 	public void switchapp() throws InterruptedException
 	{
 	Thread.sleep(3000);
